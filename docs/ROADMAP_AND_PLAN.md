@@ -1,5 +1,25 @@
 # HandyManny — Roadmap and Step-by-Step Plan
 
+## Vision
+
+**Goal:** A high-control, fast, sane AI automation workflow that truly serves Handy Manny's business—**client attraction**, **retention**, and **reputation**—without overbuilding or breaking what works.
+
+**Principles:**
+- **Foundation first.** Site, form, attribution, and remarketing before any new "AI co-founder" stack. No Kubernetes, Terraform, or enterprise infra—Manny's scale is one site, one brand, ~60 crew.
+- **One roadmap.** Follow the Blueprint order; confirm with Manny before shifting focus. No parallel big projects (e.g. building dedicated AI CTO/CMO for him right now).
+- **Elena = his tech co-founder.** She uses her own CTO AIPA (AIdeazz) for technical decisions about his stack. Manny does not need a separate "AI CTO" instance.
+- **"AI marketing" later.** A lightweight "Manny CMO" (theme → LinkedIn/social drafts in his voice) is valuable **after** the site is live and the content pipeline exists—not before.
+
+---
+
+## What We're NOT Doing Right Now
+
+- **Not** building a dedicated AI CTO for Manny (no codebase to review; Elena + her CTO AIPA cover tech).
+- **Not** building a dedicated AI CMO for Manny until Phase 2 content is in place (then: one script, his brand context, theme → drafts).
+- **Not** following generic "AI advice" that suggests Kubernetes, EKS, Terraform, or enterprise infra—that does not serve his business.
+
+---
+
 ## How the Three Documents Fit
 
 | Document | Role |
@@ -30,43 +50,45 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 
 ## 90-Day Roadmap (Simplified)
 
-### Phase 1: Foundation (Weeks 1–3) — Module 1 + start of 2 & 3
+### Phase 1: Foundation (Weeks 1–4) — Module 1 + start of 2 & 3
 
-**Goal:** Website ownership, forms, tracking, and remarketing.
-
-| Week | Focus | Outcome |
-|------|--------|--------|
-| **Week 1** | Domain + hosting + WordPress | handymannys-ky.com live on Manny-owned SiteGround with WordPress. |
-| **Week 2** | Port old site, form, attribution | New site matches old; form → Manny + Elena + DB; UTM/landing URL captured. |
-| **Week 3** | GTM, GA, Remarketing | Manny owns GTM/GA; you set up tags and remarketing audiences. |
-
-### Phase 2: Content and Attribution (Weeks 4–6) — Modules 2 & 3
-
-**Goal:** Content pipeline and attribution habit.
+**Goal:** Site live, leads captured, attribution and remarketing in place. High control over client attraction.
 
 | Week | Focus | Outcome |
 |------|--------|--------|
-| **Week 4** | Content staging + one pilot | One project → one blog draft + one social post. |
-| **Week 5** | Content approval workflow | Manny (or marketing) approves drafts; no pile-up. |
-| **Week 6** | Attribution workflow | Monthly attribution review in Sheets; form captures UTM/landing URL. |
+| **Week 1** | Domain + SiteGround + WordPress; Elena as collaborator | handymannys-ky.com on Manny-owned hosting; both admins. |
+| **Week 2** | Port site, form (Manny + Elena + DB), UTM + landing URL | Same look/function; every lead has source. |
+| **Week 3** | GTM, GA (Manny owns), remarketing audience | Traffic visibility; retarget visitors. |
+| **Week 4** | Attribution in Sheets + monthly "where did this come from?" | One place to see which channel drives jobs. |
 
-### Phase 3: Outbound Systems (Weeks 7–12) — Modules 4, 5, 6
+### Phase 2: Content and Reputation (Weeks 5–8) — Modules 2 & 3
 
-**Goal:** List building, Instantly, subcontractor outreach.
-
-| Week | Focus | Outcome |
-|------|--------|--------|
-| **Weeks 7–8** | Instantly setup + first list | One city, one role type, Hunter.io-validated list; first Instantly test. |
-| **Weeks 9–10** | Takeoff parsing + sub outreach | Parse takeoffs → trades/scope; send trade-specific outreach via Instantly. |
-| **Weeks 11–12** | Dashboards and refinement | Per-job sub dashboard; refine list builder and workflows. |
-
-### Phase 4: Lead Triage (Weeks 10–12, can overlap) — Module 7
-
-**Goal:** Smith.ai → prioritized leads.
+**Goal:** Steady content from real work; visibility and reputation upgrade.
 
 | Week | Focus | Outcome |
 |------|--------|--------|
-| **Weeks 10–12** | Smith.ai dashboard | Ingest emails → extract/sort → Lexington vs rest, by priority. |
+| **Week 5** | Content staging + one pilot (1 project → 1 blog draft + 1 social post) | Proof the pipeline works. |
+| **Week 6** | Approval workflow (Manny or marketing approves drafts) | No pile-up; consistent publishing. |
+| **Week 7** | Optional **"Manny CMO"**: script in this repo (theme + context → LinkedIn/social draft, his brand) | Reuse CMO AIPA idea; no new infra. |
+| **Week 8** | Content pipeline feeds Manny CMO where useful; 2–4 posts/month | Reputation and "big jobs" positioning. |
+
+### Phase 3: Outbound and Lead Triage (Weeks 9–12) — Modules 4, 5, 6, 7
+
+**Goal:** More control over who he reaches and who he calls first.
+
+| Week | Focus | Outcome |
+|------|--------|--------|
+| **Weeks 9–10** | Instantly + one city/role list, Hunter.io, permission-based copy | Safe outbound for work-source leads. |
+| **Week 11** | Smith.ai → lead triage (Lexington vs rest, by deal size) | Call best leads first when busy. |
+| **Week 12** | Takeoff → subs by trade (if he uses takeoffs); else refine lists and dashboards | Scalable sub sourcing or clearer pipeline. |
+
+### When to Add "AI Co-Founder" Style Pieces
+
+| Piece | When | What it is |
+|-------|------|------------|
+| **AI tech co-founder** | **Now (implicit).** | Elena + her CTO AIPA. She asks it about his stack; he gets her judgment and execution. No separate Manny CTO. |
+| **Manny CMO** | **After Phase 2 content pipeline (e.g. Week 7–8).** | Script in `handy_manny-s`: theme → LinkedIn/social draft, his brand. Same idea as AIdeazz CMO AIPA, different context. |
+| **Manny talks to an AI himself** | **Only if he asks.** | Later: simple WhatsApp or Telegram bot → Claude with "Handy Manny's context." No Oracle, no 60 commands. |
 
 ---
 
@@ -77,7 +99,7 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 - [ ] Join AI Architect Slack.
 - [ ] Contract with Manny's LLC signed.
 - [ ] WhatsApp exchanged with Manny.
-- [ ] Manny has Squarespace login ready.
+- [ ] Manny has Squarespace (or domain registrar) login ready.
 
 ### Week 1 — Domain, Hosting, WordPress
 
@@ -86,7 +108,7 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 | 1.1 | Get from Manny: full domain list; confirm primary = handymannys-ky.com. | Manny |
 | 1.2 | Manny purchases SiteGround GrowBig; adds you as teammate. | Manny |
 | 1.3 | In SiteGround: add new WordPress site; you and Manny both get admin logins. | Elena |
-| 1.4 | Zoom: Manny shares screen, logs into Squarespace, changes nameservers for handymannys-ky.com to SiteGround. | Manny (Elena guides) |
+| 1.4 | Zoom: Manny shares screen, logs into registrar (Squarespace or wherever domain lives), changes nameservers for handymannys-ky.com to SiteGround. | Manny (Elena guides) |
 | 1.5 | Verify domain resolves to new site; confirm WordPress admin works. | Elena |
 | 1.6 | Review old website (content, structure, functionality); document what to port. | Elena |
 
@@ -113,35 +135,38 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 4. **Communication:** WhatsApp daily or every other day (~8–9 AM CST).
 5. **Blockers:** Use AI Architect Slack within a few hours if stuck.
 6. **Content:** Start with 3–5 project photos/videos; don't wait for a full library.
+7. **No scope creep:** No Kubernetes, no dedicated AI CTO/CMO build until foundation and content are in place.
 
 ---
 
 ## One-Page Summary
 
 ```
-WEEK 1–3: Foundation
-   Domain → SiteGround → WordPress → Form (with attribution) → GTM/GA → Remarketing
+VISION
+  Sane, fast workflow for attraction, retention, reputation.
+  Foundation first; no enterprise infra. Elena = his tech co-founder (her CTO AIPA).
+  Manny CMO (theme → social drafts) after content pipeline exists.
 
-WEEK 4–6: Content + Attribution Habit
-   Content assembly line (pilot) + monthly attribution review
+PHASE 1 (Weeks 1–4): Foundation
+  Domain → SiteGround → WordPress → Form (with attribution) → GTM/GA → Remarketing → Attribution habit
 
-WEEK 7–9: Outbound
-   Instantly setup → List builder (1 city, 1 role) → Takeoff parsing
+PHASE 2 (Weeks 5–8): Content + Reputation
+  Content assembly line (pilot) → approval workflow → optional Manny CMO script → 2–4 posts/month
 
-WEEK 10–12: Dashboards + Smith.ai
-   Sub dashboard + Smith.ai lead triage
+PHASE 3 (Weeks 9–12): Outbound + Triage
+  Instantly + list builder → Smith.ai lead triage → Takeoff/subs or refinement
 ```
 
 ---
 
-## Before You Start (Feb 25)
+## Before You Start
 
 - [ ] Written contract with Manny's LLC.
-- [ ] Manny's Squarespace and SiteGround access confirmed.
+- [ ] Manny's domain registrar and SiteGround access confirmed.
 - [ ] WhatsApp contact exchanged.
 - [ ] Slack invite accepted.
 - [ ] Agreed single top priority for Week 1.
 
 ---
 
-*Source: Synthesis of MS-AI Systems Builder, Manny Santos Implementation Blueprint, and Elena Starting Tasks. Implement in order; confirm with client before shifting priorities.*
+*Source: Synthesis of MS-AI Systems Builder, Manny Santos Implementation Blueprint, Elena Starting Tasks, and CTO AIPA vision (sane roadmap, no premature AI CTO/CMO build). Implement in order; confirm with client before shifting priorities.*

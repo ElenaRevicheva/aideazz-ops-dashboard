@@ -5,7 +5,8 @@
   "description": "HandyManny LLC — docs and roadmap",
   "scripts": {
     "pdf": "md-to-pdf docs/ROADMAP_AND_PLAN.md",
-    "pdf:all": "md-to-pdf docs/*.md",
+    "pdf:summary": "md-to-pdf docs/CONTENT_AUDIT_SUMMARY_FOR_MANNY.md",
+    "pdf:all": "md-to-pdf docs/ROADMAP_AND_PLAN.md docs/CONTENT_AUDIT_SUMMARY_FOR_MANNY.md",
     "pdf:file": "md-to-pdf"
   },
   "devDependencies": {

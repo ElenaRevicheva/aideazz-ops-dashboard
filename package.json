@@ -1,0 +1,14 @@
+{
+  "name": "handy_manny-s",
+  "version": "0.0.1",
+  "private": true,
+  "description": "HandyManny LLC — docs and roadmap",
+  "scripts": {
+    "pdf": "md-to-pdf docs/ROADMAP_AND_PLAN.md",
+    "pdf:all": "md-to-pdf docs/*.md",
+    "pdf:file": "md-to-pdf"
+  },
+  "devDependencies": {
+    "md-to-pdf": "^5.2.3"
+  }
+}

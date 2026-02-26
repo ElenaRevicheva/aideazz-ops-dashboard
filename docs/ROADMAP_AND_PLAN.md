@@ -1,5 +1,13 @@
 # HandyManny — Roadmap and Step-by-Step Plan
 
+---
+
+## For Manny
+
+This document is your technical roadmap—the plan we follow to build your site, capture leads, and grow your visibility. I act as your **AI Architect**: I design the systems (site, forms, attribution, content pipeline, automation) and implement them. Think of it as your tech co-founder who builds what we agree on, in the order that makes sense for your business. If anything here is unclear, just ask. We'll confirm each phase in WhatsApp before moving to the next.
+
+---
+
 ## Vision
 
 **Goal:** A high-control, fast, sane AI automation workflow that truly serves Handy Manny's business—**client attraction**, **retention**, and **reputation**—without overbuilding or breaking what works.

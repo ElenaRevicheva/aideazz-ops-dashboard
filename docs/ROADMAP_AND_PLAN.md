@@ -80,11 +80,13 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 
 **Goal:** Steady content from real work; visibility and reputation upgrade.
 
+**AI Leverage (add-on, after foundation stable):** See [AI_LEVERAGE_FOR_MANNY.md](AI_LEVERAGE_FOR_MANNY.md). No AI before Phase 1 is done.
+
 | Week | Focus | Outcome |
 |------|--------|--------|
-| **Week 5** | Content staging + one pilot (1 project → 1 blog draft + 1 social post) | Proof the pipeline works. |
-| **Week 6** | Approval workflow (Manny or marketing approves drafts) | No pile-up; consistent publishing. |
-| **Week 7** | Optional **"Manny CMO"**: script in this repo (theme + context → LinkedIn/social draft, his brand) | Reuse CMO AIPA idea; no new infra. |
+| **Week 5** | Content staging + one pilot (1 project → 1 blog draft + 1 social post); **AI Proposal Draft Engine** (structured prompt + template) | Proof the pipeline works; proposal time 3h → 30min. |
+| **Week 6** | Approval workflow (Manny or marketing approves drafts); **Case study automation** (1 project → 5 marketing assets) | No pile-up; consistent publishing. |
+| **Week 7** | Optional **"Manny CMO"**: script (theme → LinkedIn/social draft); **AI Intake scoring** (summarize lead, score likelihood, suggest follow-up) | Reuse CMO AIPA idea; call high-value leads first. |
 | **Week 8** | Content pipeline feeds Manny CMO where useful; 2–4 posts/month | Reputation and "big jobs" positioning. |
 
 ### Phase 3: Outbound and Lead Triage (Weeks 9–12) — Modules 4, 5, 6, 7
@@ -93,11 +95,28 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 
 **Note:** Phase 3 is recommended only after Phase 1 metrics show stable traffic and lead capture (e.g. 2+ weeks of form submissions with attribution and real-time GA data). Prevents premature expansion.
 
+**AI Leverage (add-on):** **Follow-up system** — AI drafts follow-up emails, SMS templates, call recaps, meeting summaries. Increases consistency; big clients appreciate professionalism.
+
 | Week | Focus | Outcome |
 |------|--------|--------|
-| **Weeks 9–10** | Instantly + one city/role list, Hunter.io, permission-based copy | Safe outbound for work-source leads. |
+| **Weeks 9–10** | Instantly + one city/role list, Hunter.io, permission-based copy; **AI Follow-up system** (draft emails, recaps) | Safe outbound; consistent follow-up. |
 | **Week 11** | Smith.ai → lead triage (Lexington vs rest, by deal size) | Call best leads first when busy. |
 | **Week 12** | Takeoff → subs by trade (if he uses takeoffs); else refine lists and dashboards | Scalable sub sourcing or clearer pipeline. |
+
+### AI Leverage Layer (Phase 2+ Add-On)
+
+Foundation (site, form, attribution, remarketing) stays in place. AI comes **after** Phase 1 is stable.
+
+| Layer | When | Purpose |
+|-------|------|---------|
+| **Proposal Draft Engine** | Week 5–6 | Structured proposal from project inputs; 3h → 30min. |
+| **Case study automation** | Week 6 | 1 project → 5 assets (page, LinkedIn, blog, bid insert). |
+| **Intake scoring** | Week 7 | Summarize lead, score likelihood, suggest follow-up. |
+| **Follow-up system** | Week 9+ | Draft emails, SMS, call recaps, meeting summaries. |
+
+Full details: [AI_LEVERAGE_FOR_MANNY.md](AI_LEVERAGE_FOR_MANNY.md). No AI theater. No fake agents. Support leverage.
+
+---
 
 ### When to Add Support Tools
 
@@ -181,11 +200,11 @@ VISION
 PHASE 1 (Weeks 1–4): Foundation
   Domain → SiteGround → WordPress → Form (with attribution) → GTM/GA → Remarketing → Attribution habit
 
-PHASE 2 (Weeks 5–8): Content + Reputation
-  Content assembly line (pilot) → approval workflow → optional Manny CMO script → 2–4 posts/month
+PHASE 2 (Weeks 5–8): Content + Reputation + AI Leverage
+  Content pipeline → Proposal Engine (Week 5–6) → Case study automation → Intake scoring (Week 7) → Manny CMO → 2–4 posts/month
 
-PHASE 3 (Weeks 9–12): Outbound + Triage
-  Instantly + list builder → Smith.ai lead triage → Takeoff/subs or refinement
+PHASE 3 (Weeks 9–12): Outbound + Triage + Follow-up
+  Instantly + list builder → AI Follow-up system → Smith.ai lead triage → Takeoff/subs or refinement
 ```
 
 ---

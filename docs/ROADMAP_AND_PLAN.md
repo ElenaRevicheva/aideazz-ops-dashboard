@@ -7,7 +7,7 @@
 **Principles:**
 - **Foundation first.** Site, form, attribution, and remarketing before any new "AI co-founder" stack. No Kubernetes, Terraform, or enterprise infra—Manny's scale is one site, one brand, ~60 crew.
 - **One roadmap.** Follow the Blueprint order; confirm with Manny before shifting focus. No parallel big projects (e.g. building dedicated AI CTO/CMO for him right now).
-- **Elena = his tech co-founder.** She uses her own CTO AIPA (AIdeazz) for technical decisions about his stack. Manny does not need a separate "AI CTO" instance.
+- **Elena will act as technical systems lead for implementation.** She uses her own tools for technical decisions about his stack. Manny does not need a separate "AI CTO" instance.
 - **"AI marketing" later.** A lightweight "Manny CMO" (theme → LinkedIn/social drafts in his voice) is valuable **after** the site is live and the content pipeline exists—not before.
 
 ---
@@ -54,9 +54,16 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 
 **Goal:** Site live, leads captured, attribution and remarketing in place. High control over client attraction.
 
+**Phase 1 Definition of Done:**
+- [ ] Domain fully controlled by Manny (handymannysky.com).
+- [ ] WordPress site live with no broken links.
+- [ ] Form captures: email copy to Manny + Elena; DB storage (e.g. Google Sheets); UTM parameters; landing URL.
+- [ ] GTM + GA verified (real-time traffic visible).
+- [ ] Remarketing audience accumulating visitors.
+
 | Week | Focus | Outcome |
 |------|--------|--------|
-| **Week 1** | Domain + SiteGround + WordPress; Elena as collaborator | handymannys-ky.com on Manny-owned hosting; both admins. |
+| **Week 1** | Domain + SiteGround + WordPress; Elena as collaborator | handymannysky.com on Manny-owned hosting; both admins. |
 | **Week 2** | Port site, form (Manny + Elena + DB), UTM + landing URL | Same look/function; every lead has source. |
 | **Week 3** | GTM, GA (Manny owns), remarketing audience | Traffic visibility; retarget visitors. |
 | **Week 4** | Attribution in Sheets + monthly "where did this come from?" | One place to see which channel drives jobs. |
@@ -76,19 +83,21 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 
 **Goal:** More control over who he reaches and who he calls first.
 
+**Note:** Phase 3 is recommended only after Phase 1 metrics show stable traffic and lead capture (e.g. 2+ weeks of form submissions with attribution and real-time GA data). Prevents premature expansion.
+
 | Week | Focus | Outcome |
 |------|--------|--------|
 | **Weeks 9–10** | Instantly + one city/role list, Hunter.io, permission-based copy | Safe outbound for work-source leads. |
 | **Week 11** | Smith.ai → lead triage (Lexington vs rest, by deal size) | Call best leads first when busy. |
 | **Week 12** | Takeoff → subs by trade (if he uses takeoffs); else refine lists and dashboards | Scalable sub sourcing or clearer pipeline. |
 
-### When to Add "AI Co-Founder" Style Pieces
+### When to Add Support Tools
 
 | Piece | When | What it is |
 |-------|------|------------|
-| **AI tech co-founder** | **Now (implicit).** | Elena + her CTO AIPA. She asks it about his stack; he gets her judgment and execution. No separate Manny CTO. |
-| **Manny CMO** | **After Phase 2 content pipeline (e.g. Week 7–8).** | Script in `handy_manny-s`: theme → LinkedIn/social draft, his brand. Same idea as AIdeazz CMO AIPA, different context. |
-| **Manny talks to an AI himself** | **Only if he asks.** | Later: simple WhatsApp or Telegram bot → Claude with "Handy Manny's context." No Oracle, no 60 commands. |
+| **Technical systems lead** | **Now.** | Elena implements agreed modules; Manny gets her judgment and execution. |
+| **Manny CMO** | **After Phase 2 content pipeline (e.g. Week 7–8).** | Script in `handy_manny-s`: theme → LinkedIn/social draft, his brand. |
+| **Manny talks to an AI himself** | **Only if he asks.** | Later: simple WhatsApp or Telegram bot with "Handy Manny's context." |
 
 ---
 
@@ -105,10 +114,10 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 
 | Step | Action | Owner |
 |------|--------|--------|
-| 1.1 | Get from Manny: full domain list; confirm primary = handymannys-ky.com. | Manny |
+| 1.1 | Get from Manny: full domain list; confirm primary = handymannysky.com. | Manny |
 | 1.2 | Manny purchases SiteGround GrowBig; adds you as teammate. | Manny |
 | 1.3 | In SiteGround: add new WordPress site; you and Manny both get admin logins. | Elena |
-| 1.4 | Zoom: Manny shares screen, logs into registrar (Squarespace or wherever domain lives), changes nameservers for handymannys-ky.com to SiteGround. | Manny (Elena guides) |
+| 1.4 | Zoom: Manny shares screen, logs into registrar (Squarespace or wherever domain lives), changes nameservers for handymannysky.com to SiteGround. | Manny (Elena guides) |
 | 1.5 | Verify domain resolves to new site; confirm WordPress admin works. | Elena |
 | 1.6 | Review old website (content, structure, functionality); document what to port. | Elena |
 
@@ -124,6 +133,20 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 | 2.6 | Set up Google Analytics; add to GTM; Manny as owner. | Manny (Elena leads) |
 | 2.7 | Get Elena added as Google Ads collaborator; start Remarketing (e.g. "All visitors – 30 days"). | Elena |
 | 2.8 | After go-live: update Yelp, Google Business, etc. with new site URL. | Elena |
+
+---
+
+## Scope Boundaries (Critical)
+
+Elena is responsible for implementation of agreed modules.
+
+**Elena's scope does not include:**
+- Sales conversion performance.
+- Revenue outcomes.
+- Lead quality outside marketing attribution.
+- Manual data entry beyond defined workflows.
+
+**What success depends on:** Marketing results depend on budget, messaging, and market conditions. Implementation delivers the systems; business outcomes require Manny's sales process, pricing, and market fit.
 
 ---
 
@@ -144,7 +167,7 @@ Work in this order. Confirm with Manny before shifting focus to the next module.
 ```
 VISION
   Sane, fast workflow for attraction, retention, reputation.
-  Foundation first; no enterprise infra. Elena = his tech co-founder (her CTO AIPA).
+  Foundation first; no enterprise infra. Elena = technical systems lead for implementation.
   Manny CMO (theme → social drafts) after content pipeline exists.
 
 PHASE 1 (Weeks 1–4): Foundation

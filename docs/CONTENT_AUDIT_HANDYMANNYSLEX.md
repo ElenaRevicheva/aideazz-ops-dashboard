@@ -215,9 +215,46 @@
 
 **Plugins to evaluate:** WPForms + HandL UTM Grabber (or similar), Fluent Forms, Formidable Forms.
 
+**Conversion improvements (for lead qualification):**
+- Add **Project timeline** field (optional): When do you want to start?
+- Add **Budget range** or **Estimated project scope** optional dropdown (e.g. Small $5k–25k | Medium $25k–100k | Large $100k+).
+- Aligns with Manny's target for larger projects; filters low-quality leads without hard-gating small jobs.
+
 ---
 
-## 5. Images & Media (not in fetch)
+## 5. Positioning Upgrade for $100k–$1M Clients
+
+Add these enhancements to strengthen big-project credibility:
+
+- **Commercial Projects section** with 3 case summaries (requires Manny to provide project details).
+- **Downloadable PDF** of Statement of Capabilities (later enhancement; start with web page).
+- **Workforce capacity** mention (crew size: 60+) — already in SoC; ensure visible.
+- **Insurance/licensing badges** — requires Manny to supply assets.
+- **Clear RFP contact path** — dedicated CTA for commercial/RFP inquiries.
+
+---
+
+## 6. Performance Requirement
+
+Construction buyers judge professionalism via speed.
+
+- **Site load:** < 2.5s on mobile (measure with PageSpeed Insights or GTmetrix).
+- **Image compression:** WebP, optimized file sizes.
+- **No heavy plugins:** Prefer lightweight themes (Astra, Kadence); avoid page builders that add >500KB JS.
+
+---
+
+## 7. Local Authority Reinforcement
+
+Big clients trust authority. Add:
+
+- **Google Reviews:** Use Google-approved embed (Place widget) or prominent link to Google Business profile.
+- **BBB badge:** Verified; confirm BBB allows badge use.
+- **Project testimonials with real location** (e.g. "Lexington, KY" or neighborhood).
+
+---
+
+## 8. Images & Media (not in fetch)
 
 **Assumed assets to port:**
 - Logo
@@ -231,7 +268,7 @@
 
 ---
 
-## 6. SEO & Technical Notes
+## 9. SEO & Technical Notes
 
 **Title tag pattern:** `[Page Topic] | Lexington, KY | Handy Manny's LLC` or `Turnkey Renovation Contractor | Lexington, KY`
 
@@ -247,7 +284,7 @@
 
 ---
 
-## 7. Mapping to WordPress Build + Your Letter to Manny
+## 10. Mapping to WordPress Build + Your Letter to Manny
 
 | Your requirement | Content / implementation |
 |------------------|--------------------------|
@@ -260,7 +297,7 @@
 
 ---
 
-## 8. Recommended WordPress Build Order
+## 11. Recommended WordPress Build Order
 
 1. **Exit wizard** → Install Astra + Starter Template (construction/contractor)
 2. **Pages to create:**
@@ -273,13 +310,13 @@
    - Terms & Privacy
 3. **Form:** Install form plugin; add UTM + landing URL capture; connect to Sheets/email
 4. **Port 5 blog posts** — preserve URLs with redirects (301) from old URLs
-5. **Redirect map:** old URLs → new WordPress URLs (see §1)
+5. **Redirect map:** old URLs → new WordPress URLs (see §12)
 6. **GTM + GA:** Week 3
 7. **Images:** Port and optimize logo, hero, service images
 
 ---
 
-## 9. Redirect Map (Old → New)
+## 12. Redirect Map (Old → New)
 
 | Old (handymannyslex.com) | New (handymannysky.com) |
 |--------------------------|--------------------------|

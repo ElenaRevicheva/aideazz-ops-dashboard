@@ -16,7 +16,7 @@
 | **Legal** | 1 (TOU + Privacy) |
 | **404 / unreachable** | 6+ (nav links to non-existent or alternate URLs) |
 
-**Key finding:** The site has strong, conversion-focused content. Some nav items point to 404s or alternate URLs. The new WordPress site should consolidate structure, fix broken links, and add UTM + form attribution from day one.
+**Key finding:** The site has strong, conversion-focused content. Some nav items point to 404s or alternate URLs. The new WordPress build on Kadence (Cedar template) should consolidate structure, fix broken links, and add UTM + form attribution from day one, without changing the underlying messaging that already works.
 
 ---
 
@@ -24,36 +24,44 @@
 
 ### Live Pages (verified)
 
-| URL | Page type | Title / purpose |
-|-----|-----------|-----------------|
-| `/` | Home | Turnkey Renovation Contractor \| Lexington, KY |
-| `/blog` | Blog index | Blog |
-| `/get-in-touch-lexington` | Contact | Let's Build Something Great—Start the Conversation Today |
-| `/residential-remodeling-services-lexington-ky` | Service landing | Trusted Residential Remodeling Contractors in Lexington, KY |
-| `/statement-of-capabilities` | Commercial / RFP | Capabilities Overview \| Lexington, KY |
-| `/recent-projects-gallery` | Portfolio | Our Latest Work: Remodeling and Construction Projects |
-| `/t/tou-and-privacy` | Legal | Terms and Conditions of Use + Privacy Policy |
+**Canonical pages and roles (simplified view):**
+
+- **Home** — `/`  
+  Turnkey Renovation Contractor \| Lexington, KY
+- **Blog index** — `/blog`  
+  Blog landing page.
+- **Contact** — `/get-in-touch-lexington`  
+  "Let's Build Something Great—Start the Conversation Today".
+- **Residential Remodeling** — `/residential-remodeling-services-lexington-ky`  
+  Trusted Residential Remodeling Contractors in Lexington, KY.
+- **Statement of Capabilities** — `/statement-of-capabilities`  
+  Capabilities Overview \| Lexington, KY (for commercial/RFP).
+- **Recent Projects Gallery** — `/recent-projects-gallery`  
+  Our Latest Work: Remodeling and Construction Projects.
+- **Terms & Privacy** — `/t/tou-and-privacy`  
+  Terms and Conditions of Use + Privacy Policy.
 
 ### Blog Posts (5 total)
 
-| URL | Title | Date |
-|-----|-------|------|
-| `/blog/why-local-home-improvement-contractor-matters` | Why a Local Home Improvement Contractor Matters | Nov 14, 2025 |
-| `/blog/what-to-know-commercial-roofing-lexington-ky` | Commercial Roofing Contractor in Lexington, KY: What to Know | Oct 9, 2025 |
-| `/blog/how-a-remodeling-contractor-expertly-transforms-homes` | How a Remodeling Contractor Expertly Transforms Your Home | Nov 17, 2025 |
-| `/choosing-a-commercial-general-contractor` | Choosing a Commercial General Contractor in Lexington, KY | Sep 18, 2025 |
-| `/home-renovations-trends` | Home Renovation Contractor: Top Home Renovation Trends | Dec 9, 2025 |
+- **Why a Local Home Improvement Contractor Matters** — `/blog/why-local-home-improvement-contractor-matters`  
+  Published Nov 14, 2025.
+- **Commercial Roofing Contractor in Lexington, KY: What to Know** — `/blog/what-to-know-commercial-roofing-lexington-ky`  
+  Published Oct 9, 2025.
+- **How a Remodeling Contractor Expertly Transforms Your Home** — `/blog/how-a-remodeling-contractor-expertly-transforms-homes`  
+  Published Nov 17, 2025.
+- **Choosing a Commercial General Contractor in Lexington, KY** — `/choosing-a-commercial-general-contractor`  
+  Published Sep 18, 2025.
+- **Home Renovation Contractor: Top Home Renovation Trends** — `/home-renovations-trends`  
+  Published Dec 9, 2025.
 
 ### Nav Items That 404 or Redirect
 
-| Nav label | Tried URL | Status |
-|-----------|-----------|--------|
-| Contact | `/contact` | 404 (actual: `/get-in-touch-lexington`) |
-| Current Projects | `/current-projects` | 404 (actual: `/recent-projects-gallery`) |
-| Home Improvement Contractor | `/home-improvement-contractor` | 404 |
-| Lexington, KY | `/lexington-ky` | 404 |
-| Home Renovation Contractor | `/home-renovation-contractor` | 404 |
-| Home Remodeling Lexington, KY | `/home-remodeling-lexington-ky` | 404 (actual: `/residential-remodeling-services-lexington-ky`) |
+- **Contact** — points to `/contact` (404); correct URL is `/get-in-touch-lexington`.
+- **Current Projects** — points to `/current-projects` (404); correct URL is `/recent-projects-gallery`.
+- **Home Improvement Contractor** — points to `/home-improvement-contractor` (404).
+- **Lexington, KY** — points to `/lexington-ky` (404).
+- **Home Renovation Contractor** — points to `/home-renovation-contractor` (404).
+- **Home Remodeling Lexington, KY** — points to `/home-remodeling-lexington-ky` (404); actual page is `/residential-remodeling-services-lexington-ky`.
 
 ### Internal Links (for redirect mapping)
 
@@ -297,44 +305,46 @@ Big clients trust authority. Add:
 
 ---
 
-## 11. Recommended WordPress Build Order
+## 11. Recommended WordPress Build Order (Kadence Cedar)
 
-1. **Exit wizard** → Install Astra + Starter Template (construction/contractor)
-2. **Pages to create:**
-   - Home (port homepage sections)
-   - Contact (port get-in-touch-lexington)
-   - Services (or split: Residential, Commercial)
+1. **Theme & starter** → Kadence + Kadence AI Starter (Cedar template) on SiteGround (already selected).
+2. **Core pages in WordPress:**
+   - Home (Magnolia/Cedar-style hero + ported homepage sections)
+   - Contact (ports `/get-in-touch-lexington` content and form spec in §4)
+   - Residential Remodeling (ports `/residential-remodeling-services-lexington-ky`)
    - Statement of Capabilities
-   - Projects / Gallery
+   - Recent Projects / Gallery
    - Blog (index)
    - Terms & Privacy
-3. **Form:** Install form plugin; add UTM + landing URL capture; connect to Sheets/email
-4. **Port 5 blog posts** — preserve URLs with redirects (301) from old URLs
-5. **Redirect map:** old URLs → new WordPress URLs (see §12)
-6. **GTM + GA:** Week 3
-7. **Images:** Port and optimize logo, hero, service images
+3. **Form:** WPForms main contact form with UTM + landing URL capture; send to Manny + Elena; later connect to Sheets/CRM.
+4. **Port 5 blog posts** — preserve URLs with redirects (301) from old URLs.
+5. **Redirect map:** old URLs → new WordPress URLs (see §12).
+6. **GTM + GA:** Add GA4 + GTM container (roadmap Week 3).
+7. **Images:** Port and optimize logo, hero, service images; ensure alt text matches priority keywords.
 
 ---
 
 ## 12. Redirect Map (Old → New)
 
-| Old (handymannyslex.com) | New (handymannysky.com) |
-|--------------------------|--------------------------|
-| `/` | `/` |
-| `/get-in-touch-lexington` | `/contact` (or keep `/get-in-touch-lexington` for SEO) |
-| `/residential-remodeling-services-lexington-ky` | `/services/residential` or `/residential-remodeling` |
-| `/statement-of-capabilities` | `/statement-of-capabilities` |
-| `/recent-projects-gallery` | `/projects` or `/gallery` |
-| `/blog` | `/blog` |
-| `/blog/why-local-home-improvement-contractor-matters` | `/blog/why-local-home-improvement-contractor-matters` |
-| `/blog/what-to-know-commercial-roofing-lexington-ky` | `/blog/commercial-roofing-contractor-lexington-ky` |
-| `/blog/how-a-remodeling-contractor-expertly-transforms-homes` | `/blog/how-remodeling-contractor-transforms-your-home` |
-| `/choosing-a-commercial-general-contractor` | `/blog/choosing-commercial-general-contractor` |
-| `/home-renovations-trends` | `/blog/home-renovation-trends` |
-| `/t/tou-and-privacy` | `/terms-privacy` or `/legal` |
+**High-level plan (for Manny):** keep things simple for humans; the exact technical slugs can live in the build docs.
 
-**Note:** If keeping SEO URLs, use same slugs. If simplifying, set up 301 redirects in SiteGround or via Redirection plugin.
+- **Home:** `/` → `/`
+- **Contact:** `/get-in-touch-lexington` → `/contact` (or keep the same slug if SEO data is strong)
+- **Residential Remodeling:** `/residential-remodeling-services-lexington-ky` → `/residential-remodeling` (or similar clean slug)
+- **Statement of Capabilities:** `/statement-of-capabilities` → `/statement-of-capabilities`
+- **Projects / Gallery:** `/recent-projects-gallery` → `/projects` or `/gallery`
+- **Blog index:** `/blog` → `/blog`
+- **Blog posts:** keep or slightly shorten, for example:
+  - `/blog/why-local-home-improvement-contractor-matters` → same or a shorter version with the same meaning
+  - `/blog/what-to-know-commercial-roofing-lexington-ky` → `/blog/commercial-roofing-contractor-lexington-ky`
+  - `/blog/how-a-remodeling-contractor-expertly-transforms-homes` → `/blog/how-remodeling-contractor-transforms-your-home`
+  - `/choosing-a-commercial-general-contractor` → `/blog/choosing-commercial-general-contractor`
+  - `/home-renovations-trends` → `/blog/home-renovation-trends`
+- **Legal:** `/t/tou-and-privacy` → `/terms-privacy` or `/legal`
+
+**Note for implementation:** Whatever final slugs we pick, set up 301 redirects in SiteGround or via a Redirection plugin so old links (and Google) keep working.
 
 ---
 
 *End of content audit. Use this document for migration planning and to prove the WordPress choice with your actions.*
+

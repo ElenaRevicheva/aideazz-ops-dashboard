@@ -160,6 +160,8 @@ Full details: [AI_LEVERAGE_FOR_MANNY.md](AI_LEVERAGE_FOR_MANNY.md). No AI theate
 | 2.6 | Set up Google Analytics; add to GTM; Manny as owner. | Manny (Elena leads) |
 | 2.7 | Get Elena added as Google Ads collaborator; start Remarketing (e.g. "All visitors – 30 days"). | Elena |
 | 2.8 | After go-live: update Yelp, Google Business, etc. with new site URL. | Elena |
+| 2.9 | Align email DNS with Google Workspace: in SiteGround DNS Zone Editor, point MX records for Manny's business mail domain (e.g. handymannys.biz) to Google's MX records; confirm mail flows to his existing Google mailbox. | Elena (Manny provides confirmation) |
+| 2.10 | Plan a dedicated email subdomain (e.g. notify.handymannysky.com) for higher-volume marketing/transactional email later, so bulk sending reputation is isolated from the main domain; implement when Phase 3 outbound volume justifies it. | Elena |
 
 ---
 

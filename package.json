@@ -7,6 +7,7 @@
     "pdf": "md-to-pdf docs/ROADMAP_AND_PLAN.md",
     "pdf:summary": "md-to-pdf docs/CONTENT_AUDIT_SUMMARY_FOR_MANNY.md",
     "pdf:all": "md-to-pdf docs/ROADMAP_AND_PLAN.md docs/CONTENT_AUDIT_SUMMARY_FOR_MANNY.md",
+    "pdf:week3": "node docs/convert-both-pdfs.js",
     "pdf:file": "md-to-pdf"
   },
   "devDependencies": {

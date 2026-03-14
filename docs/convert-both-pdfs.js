@@ -10,6 +10,7 @@ const { PDFDocument, StandardFonts, rgb } = require('pdf-lib');
 const FILES = [
   ['ROADMAP_AND_PLAN.md', 'ROADMAP_AND_PLAN.pdf'],
   ['CONTENT_AUDIT_SUMMARY_FOR_MANNY.md', 'CONTENT_AUDIT_SUMMARY_FOR_MANNY.pdf'],
+  ['WEEK3_PLAN_ELENA.md', 'WEEK3_PLAN_ELENA.pdf'],
 ];
 
 function toAscii(text) {

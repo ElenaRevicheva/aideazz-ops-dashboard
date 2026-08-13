@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import {
   MOCK_OPS_ROWS,
   type IncomeStream,
@@ -7,6 +7,21 @@ import {
 import './App.css'
 
 type Filter = 'all' | IncomeStream
+
+/**
+ * Live read-only feed: an n8n workflow on Oracle that queries HubSpot and returns
+ * OpsRow[] directly. Read-only by construction — the credential behind it cannot
+ * write to the CRM.
+ *
+ * RELATIVE on purpose. This dashboard is served from the SAME origin as the API
+ * (webhook.aideazz.xyz), which means two things: no CORS at all, and the browser
+ * sends the HTTP-auth credentials automatically — so one login covers the page
+ * and its data. An absolute cross-origin URL would need CORS opened up, and a
+ * static page cannot hold a secret to authenticate with.
+ */
+const OPS_API = '/crm/webhook/ops'
+
+type FeedState = 'loading' | 'live' | 'offline'
 
 function streamLabel(s: IncomeStream): string {
   switch (s) {
@@ -35,18 +50,46 @@ function formatUpdated(iso: string): string {
 
 function App() {
   const [filter, setFilter] = useState<Filter>('all')
+  const [liveRows, setLiveRows] = useState<OpsRow[] | null>(null)
+  const [feed, setFeed] = useState<FeedState>('loading')
+
+  // Fetch once on load. If the API is unreachable we fall back to the mock rows
+  // rather than showing an empty screen — a dashboard that renders stale data
+  // and SAYS SO is more useful than one that renders nothing.
+  useEffect(() => {
+    let cancelled = false
+    fetch(OPS_API)
+      .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
+      .then((data: unknown) => {
+        if (cancelled) return
+        if (Array.isArray(data) && data.length) {
+          setLiveRows(data as OpsRow[])
+          setFeed('live')
+        } else {
+          setFeed('offline')
+        }
+      })
+      .catch(() => {
+        if (!cancelled) setFeed('offline')
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
+  const source = liveRows ?? MOCK_OPS_ROWS
 
   const rows = useMemo(() => {
-    if (filter === 'all') return MOCK_OPS_ROWS
-    return MOCK_OPS_ROWS.filter((r) => r.stream === filter)
-  }, [filter])
+    if (filter === 'all') return source
+    return source.filter((r) => r.stream === filter)
+  }, [filter, source])
 
   const counts = useMemo(() => {
-    const needs = MOCK_OPS_ROWS.filter((r) => r.needsAction)
+    const needs = source.filter((r) => r.needsAction)
     return {
-      hiring: MOCK_OPS_ROWS.filter((r) => r.stream === 'HIRING').length,
-      client: MOCK_OPS_ROWS.filter((r) => r.stream === 'CLIENT').length,
-      espaluz: MOCK_OPS_ROWS.filter((r) => r.stream === 'ESPALUZ').length,
+      hiring: source.filter((r) => r.stream === 'HIRING').length,
+      client: source.filter((r) => r.stream === 'CLIENT').length,
+      espaluz: source.filter((r) => r.stream === 'ESPALUZ').length,
       needsAction: needs.length,
       byStream: {
         HIRING: needs.filter((r) => r.stream === 'HIRING').length,
@@ -54,7 +97,7 @@ function App() {
         ESPALUZ: needs.filter((r) => r.stream === 'ESPALUZ').length,
       },
     }
-  }, [])
+  }, [source])
 
   return (
     <div className="ops">
@@ -62,7 +105,11 @@ function App() {
         <div>
           <h1 className="ops-title">Income ops</h1>
           <p className="ops-sub">
-            Three streams — mock data. Wire to read-only API when ready.
+            {feed === 'live'
+              ? `Three streams — live from HubSpot · ${source.length} open items`
+              : feed === 'loading'
+                ? 'Three streams — loading live data…'
+                : 'Three streams — SAMPLE DATA (live feed unreachable)'}
           </p>
         </div>
       </header>

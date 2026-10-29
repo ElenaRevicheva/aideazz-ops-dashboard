@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
 import {
-  MOCK_OPS_ROWS,
   type IncomeStream,
   type OpsRow,
 } from './data/mockOpsRows'
@@ -53,9 +52,9 @@ function App() {
   const [liveRows, setLiveRows] = useState<OpsRow[] | null>(null)
   const [feed, setFeed] = useState<FeedState>('loading')
 
-  // Fetch once on load. If the API is unreachable we fall back to the mock rows
-  // rather than showing an empty screen — a dashboard that renders stale data
-  // and SAYS SO is more useful than one that renders nothing.
+  // Fetch once on load. 29 Oct 2026 (Elena: "my CRM must not be garbaged by stale, simulated
+  // data"): if the feed is unreachable the table stays EMPTY and the header says so. The mock
+  // rows are never shown — not while loading, not as a fallback.
   useEffect(() => {
     let cancelled = false
     fetch(OPS_API)
@@ -77,7 +76,7 @@ function App() {
     }
   }, [])
 
-  const source = liveRows ?? MOCK_OPS_ROWS
+  const source = liveRows ?? []
 
   const rows = useMemo(() => {
     if (filter === 'all') return source
@@ -106,10 +105,10 @@ function App() {
           <h1 className="ops-title">Income ops</h1>
           <p className="ops-sub">
             {feed === 'live'
-              ? `Three streams — live from HubSpot · ${source.length} open items`
+              ? `Three streams — live from the AIdeazz CRM · ${source.length} open items`
               : feed === 'loading'
                 ? 'Three streams — loading live data…'
-                : 'Three streams — SAMPLE DATA (live feed unreachable)'}
+                : 'Live feed unreachable — nothing shown (no sample data)'}
           </p>
         </div>
       </header>
